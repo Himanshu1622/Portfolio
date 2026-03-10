@@ -289,7 +289,7 @@ export default function App() {
                 <div className="flex items-center gap-4 px-4">
                   <a href="#" className="p-2 hover:text-emerald-600 transition-colors"><Github size={24} /></a>
                   <a href="#" className="p-2 hover:text-emerald-600 transition-colors"><Linkedin size={24} /></a>
-                  <a href="#" className="p-2 hover:text-emerald-600 transition-colors"><Mail size={24} /></a>
+                  <a href="mailto:himanshu.vrma16@gmail.com" className="p-2 hover:text-emerald-600 transition-colors"><Mail size={24} /></a>
                 </div>
               </div>
             </motion.div>
@@ -495,20 +495,20 @@ export default function App() {
                 Whether you're looking for a digital marketing strategist to scale your growth or a frontend partner to build your vision, I'm here to help.
               </p>
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
+                <a href="mailto:himanshu.vrma16@gmail.com" className="flex items-center gap-4 hover:opacity-95 transition-opacity">
                   <div className="p-3 bg-emerald-700 rounded-xl"><Mail size={24} /></div>
                   <div>
                     <p className="text-emerald-200 text-sm font-bold uppercase tracking-widest">Email Me</p>
                     <p className="text-xl font-bold">himanshu.vrma16@gmail.com</p>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </a>
+                <a href="https://wa.me/917888865838" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-95 transition-opacity">
                   <div className="p-3 bg-emerald-700 rounded-xl"><MessageSquare size={24} /></div>
                   <div>
                     <p className="text-emerald-200 text-sm font-bold uppercase tracking-widest">Chat</p>
-                    <p className="text-xl font-bold">Available for calls</p>
+                    <p className="text-xl font-bold">Available on chat</p>
                   </div>
-                </div>
+                </a>
               </div>
             </motion.div>
 
