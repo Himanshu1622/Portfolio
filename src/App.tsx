@@ -559,7 +559,7 @@ export default function App() {
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-black uppercase tracking-widest text-black/40">Email Address</label>
-                      <input 
+                      <input
                         required
                         name="email"
                         type="email" 
