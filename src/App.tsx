@@ -120,6 +120,19 @@ const Navbar = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href?: string) => {
+    e.preventDefault();
+    const hrefVal = href || (e.currentTarget && (e.currentTarget as HTMLAnchorElement).getAttribute('href')) || '';
+    if (!hrefVal || !hrefVal.includes('#')) return;
+    const id = hrefVal.split('#')[1];
+    const target = document.getElementById(id);
+    if (!target) return;
+    const nav = document.querySelector('nav');
+    const offset = (nav && (nav as HTMLElement).offsetHeight) ? (nav as HTMLElement).offsetHeight : 80;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-black/5 py-4' : 'bg-transparent py-6'} ${visible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
@@ -138,6 +151,7 @@ const Navbar = () => {
             <motion.a
               key={link.name}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
@@ -176,7 +190,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => { setIsOpen(false); handleNavClick(e, link.href); }}
                   className="text-lg font-medium text-black/60 hover:text-black transition-colors"
                 >
                   {link.name}
@@ -184,7 +198,7 @@ const Navbar = () => {
               ))}
               <a
                 href="#contact"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => { setIsOpen(false); handleNavClick(e, '#contact'); }}
                 className="mt-4 px-6 py-3 bg-black text-white text-center font-bold rounded-2xl hover:bg-black/80 transition-all"
               >
                 Hire Me
