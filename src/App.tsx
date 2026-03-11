@@ -63,9 +63,9 @@ const PROJECTS: Project[] = [
 
 const EXPERIENCES: Experience[] = [
   {
-    role: "Senior Digital Marketing Executive",
+    role: "Digital Marketing Specialist",
     company: "CASA harmony (Dubai)",
-    period: "Nov 2025 - Present",
+    period: "Oct 2025 - Present",
     description: "Leading digital growth initiatives and performance marketing strategies in the Dubai market."
   },
   {
