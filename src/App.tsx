@@ -553,7 +553,7 @@ export default function App() {
                         required
                         name="name"
                         type="text" 
-                        placeholder="John Doe"
+                        placeholder="Anurag Verma"
                         className="w-full px-6 py-4 bg-zinc-50 border border-black/5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-600 transition-all"
                       />
                     </div>
@@ -563,7 +563,7 @@ export default function App() {
                         required
                         name="email"
                         type="email" 
-                        placeholder="john@example.com"
+                        placeholder="anurag@example.com"
                         className="w-full px-6 py-4 bg-zinc-50 border border-black/5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-600 transition-all"
                       />
                     </div>
@@ -574,7 +574,7 @@ export default function App() {
                       required
                       name="subject"
                       type="text" 
-                      placeholder="Project Inquiry"
+                      placeholder="Related to Subject"
                       className="w-full px-6 py-4 bg-zinc-50 border border-black/5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-600 transition-all"
                     />
                   </div>
@@ -584,7 +584,7 @@ export default function App() {
                       required
                       name="message"
                       rows={4}
-                      placeholder="Tell me about your project..."
+                      placeholder="Write your message here..."
                       className="w-full px-6 py-4 bg-zinc-50 border border-black/5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-600 transition-all resize-none"
                     ></textarea>
                   </div>
