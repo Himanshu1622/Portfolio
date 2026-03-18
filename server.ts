@@ -24,7 +24,7 @@ function getMime(filePath: string) {
 }
 
 async function startServer() {
-  const PORT = 3000;
+  const PORT = parseInt(process.env.PORT || "3000", 10);
   const isDev = process.env.NODE_ENV !== "production";
   let vite: any = null;
 
@@ -128,6 +128,13 @@ async function startServer() {
 
   server.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`);
+  });
+  server.on('error', (err: any) => {
+    if (err && err.code === 'EADDRINUSE') {
+      console.error(`Port ${PORT} is already in use. Try setting a different PORT environment variable or stop the process using this port.`);
+      process.exit(1);
+    }
+    console.error(err);
   });
 }
 

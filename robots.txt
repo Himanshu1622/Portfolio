@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Himanshu1622.github.io/Portfolio/sitemap.xml
+Host: https://Himanshu1622.github.io/Portfolio
